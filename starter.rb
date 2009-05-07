@@ -3,12 +3,16 @@ run "rm public/index.html"
 generate :nifty_layout
 
 gem "thoughtbot-factory_girl", :lib => "factory_girl", :source =>  "http://gems.github.com"
+gem "authlogic"
+gem "lockdown", :version => "0.9.5"
+
 rake "gems:install"
 
 plugin "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 plugin "rspec", :git => "git://github.com/dchelimsky/rspec.git"
 plugin "rspec-rails", :git => "git://github.com/dchelimsky/rspec-rails.git"
 plugin "limerick_rake", :git => "git://github.com/thoughtbot/limerick_rake.git"
+plugin "hoptoad_notifier", :git => "git://github.com/thoughtbot/hoptoad_notifier.git"
 
 generate :rspec
 
